@@ -1,0 +1,561 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 ,h5, h6, p{
+    font-family: sans-serif;
+}
+
+button{
+    width: 120px;
+    height: 40px;
+    font-family: sans-serif;
+    border: 0;
+    font-weight: bold;
+}
+
+.navbar-brand{
+    font-size: 13px;
+    border-top: 2px solid #1E90FFFF;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+.navbar>.container-fluid{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1;
+}
+
+.column1{
+    flex: 1 0 47rem;
+}
+
+.column2{
+    flex: 1 0 8rem;
+}
+
+.image, img{
+    width: 100%;
+    position: relative;
+}
+
+.image, .sm1{
+    position: relative;
+}
+
+.image > p{
+    text-align: end;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.image > button{
+    position: absolute;
+    top: 77%;
+    left: 82%;
+    color: #1E90FFFF;
+}
+
+.image > span{
+    text-align: end;
+    position: absolute;
+    top: 90%;
+    left: 84%;
+    font-style: italic;
+}
+
+.text p{
+    margin: 3px;
+}
+
+.sm1 > img{
+    width: 350px;
+}
+
+.sm1 > .text > p,
+.sm1 i{
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sm1 > .text{
+    width: 40%;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 46%;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+.sm1 > button{
+    position: absolute;
+    top: 60%;
+    left: 52%;
+}
+
+.sm2, .sm2 > img{
+    width: 350px;
+}
+
+.sm2{
+    position: relative;
+}
+
+.sm2 > p{
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    color: #152255;
+    border: 3px solid #53b7f1;
+    border-radius: 40px;
+    background: white;
+    height: 33%;
+    width: 75%;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 99999;
+}
+.sm2 > button{
+    position: absolute;
+    top: 72%;
+    left: 35%;
+    color: #fff;
+    background: #152255;
+    z-index: 1;
+}
+
+.sm2::after{
+    content: " ";
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    background-color: #ffffffa1;
+    top: 0;
+    left: 0;
+}
+
+
+.icon {
+    display: grid;
+    justify-items: center;
+    width: 220px;
+    text-align: center;
+}
+
+.icon > img{
+    width: 150px;
+    height: 150px;
+}
+
+.icon > button{
+    margin-top: 20px;
+    color: #fff;
+    background: #152255;
+}
+
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    background: #f1f1f1;
+}
+
+.wrapper{
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i{
+    height: 50px;
+    width: 50px;
+    background: #a7a7a7;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.wrapper i:first-child{
+    left: 5px;
+    z-index: 1;
+}
+.wrapper i:last-child{
+    right: -5px;
+}
+
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card-img{
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel .card-img{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card .card-img img{
+    width: 51%;
+    height: 140px;
+    margin: 30px;
+    object-fit: cover;
+}
+
+.card h2{
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+    color: #006bad;
+}
+
+.card span {
+    text-align: center;
+    font-size: 1.31rem;
+    width: 70%;
+}
+
+
+footer {
+    position: relative;
+    top: 0;
+    background-color: #3d73ba;
+}
+
+.info {
+    padding: 5%;
+}
+
+.logo{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.logo > p{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    width: 45%;
+    margin-top: 2%;
+}
+
+.copy {
+    width: 100%;
+    background-color: #3d73ba;
+    padding: 20px 0;
+    color: #fff;
+    border-top: 1px solid;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1;
+    justify-content: center;
+}
+
+.end{
+    text-align: center;
+}
+
+.end > p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.end > ul{
+    display: contents;
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.footer-copy{
+    text-align: center;
+    background-color: #3d73ba;
+    height: 45px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.row,
+.card{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.row.visible,
+.card.visible{
+  opacity: 2;
+  transform: translateY(0);
+}
+
+
+@media screen and (min-width: 1025px) and (max-width: 1220px) {
+
+    .image > p{
+        top: 36%;
+        left: 58%;
+        font-size: 30px;
+    }
+
+    .image > button{
+        top: 79%;
+        left: 84%;
+    }
+
+    .image > span{
+        top: 90%;
+        left: 83%;
+        font-size: 20px;
+    }
+
+    .column1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .small_images{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .navbar>.container-fluid{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image > p{
+        top: 34%;
+        left: 56%;
+        font-size: 24px;
+    }
+
+    .image > button{
+        top: 80%;
+        left: 81%;
+    }
+
+    .image > span{
+        top: 91%;
+        left: 82%;
+        font-size: 17px;
+    }
+
+     .column1{
+        display: flex;
+        justify-content: center;
+     }
+
+    .small_images{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+    }
+
+    .singup{
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .navbar>.container-fluid{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image > p{
+        top: 35%;
+        left: 60%;
+        font-size: 14px;
+    }
+
+    .image > button{
+        top: 76%;
+        left: 76%;
+        width: 100px;
+        height: 34px;
+    }
+
+    .image > span{
+        top: 91%;
+        left: 80%;
+        font-size: 12px;
+    }
+
+    .flex{
+        justify-content: center;
+    }
+
+    .icon{
+        margin-bottom: 5%;
+    }
+
+    .column1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .small_images{
+        display: flex;
+        margin-top: 5%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .singup{
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+    .navbar>.container-fluid{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image > p{
+        top: 27%;
+        left: 60%;
+        font-size: 9px;
+    }
+
+    .image > button{
+        top: 71%;
+        left: 73%;
+        width: 74px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    .image > span{
+        top: 89%;
+        left: 78%;
+        font-size: 9px;
+    }
+
+    .sm1 > .text {
+        left: 52%;
+    }
+
+    .flex{
+        justify-content: center;
+    }
+
+    .icon{
+        margin-bottom: 5%;
+    }
+
+    .sm1 > img,
+    .sm2, .sm2 > img {
+        width: 100%;
+    }
+
+    .sm2::after {
+        width: 100%;
+    }
+
+    .column1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .small_images{
+        display: flex;
+        margin-top: 5%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sm1 > .text {
+        backdrop-filter: blur(100px);
+    }
+
+    .singup{
+        text-align: center;
+    }
+
+}
+
+
+
+@media  screen and (max-width: 900px){
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media  screen and (max-width: 600px){
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
+    }
+}
+
